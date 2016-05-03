@@ -1,0 +1,9 @@
+<div ng-include="'/navbar.html'"></div>
+  <h3>{{post.title.rendered}}</h3>
+  <em>{{post.date}}</em><br>
+  <div class="row">
+    <div class="col-sm-12">
+      <div ng-bind-html="post.content.rendered | sanitize" ></div>
+  </div>
+
+<a href='/index'>Go back</a>
