@@ -1,0 +1,13 @@
+#wrapper
+  div(ng-include="'app/nav.html'")
+  #page-wrapper
+    .container-fluid
+      .row
+        .col-sm-12
+          h3 {{post.title.rendered}}
+          em {{post.date}}
+          br
+      .row
+        .col-sm-12
+          div(ng-bind-html='post.content.rendered | sanitize')
+        a(href='/index') Go to index
